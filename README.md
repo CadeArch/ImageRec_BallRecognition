@@ -37,3 +37,5 @@
 ## mobility / Taylor John (perception can help)
 ## intelligence (integrate every stack) / Brian John Alex
 ## testing prototyping / Taylor
+
+
