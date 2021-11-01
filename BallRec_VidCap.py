@@ -14,6 +14,8 @@ cap = cv2.VideoCapture(
 # The above step is to set the Resolution of the Video. The default is 640x480.
 # This example works with a Resolution of 640x480.
 
+# CHANGE CODE TO DETECT ANY CIRCLE NOT BASED ON COLOR
+
 while (True):
     # Capture frame-by-frame
     ret, frame = cap.read()

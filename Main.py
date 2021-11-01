@@ -16,7 +16,7 @@ def main():
     print("openCV version: " + cv2.__version__)
 
 
-    image = cv2.imread('resources/ball.png')
+    image = cv2.imread('resources/ball5.jfif')
     output = image.copy()
 
 
@@ -40,7 +40,7 @@ def main():
     cv2.waitKey(0)
 
     # detect circles in the image
-    circles = cv2.HoughCircles(gray, cv2.HOUGH_GRADIENT, 1.5, 150)
+    circles = cv2.HoughCircles(gray, cv2.HOUGH_GRADIENT, 1.5, 1000)
     # ensure at least some circles were found
     if circles is not None:
         # convert the (x, y) coordinates and radius of the circles to integers
