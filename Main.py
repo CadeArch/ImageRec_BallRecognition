@@ -15,10 +15,8 @@ def main():
     commandToTakeFoto = "fswebcam -d /dev/video0 --no-banner -r 320x240 -S 10 " + dirFoto + imageName
     print("openCV version: " + cv2.__version__)
 
-    # img = Image.open('resources/ball.png')
-    # data = np.asarray(img)
-    # print(data.shape)
-    image = cv2.imread('resources/ball3.jfif')
+
+    image = cv2.imread('resources/ball.png')
     output = image.copy()
 
 
