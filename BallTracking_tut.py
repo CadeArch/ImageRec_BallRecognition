@@ -1,4 +1,3 @@
-import cv2
 
 # import the necessary packages
 from collections import deque

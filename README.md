@@ -41,6 +41,8 @@
     installing openVC with pip - https://www.pyimagesearch.com/2018/09/19/pip-install-opencv/
     possible help - https://www.bluetin.io/opencv/object-detection-tracking-opencv-python/
     ball tracking tutorial - https://www.pyimagesearch.com/2015/09/14/ball-tracking-with-opencv/
-    detecting circles - https://www.instructables.com/Detecting-Circles-With-OpenCV-and-Python/
-                      - https://www.pyimagesearch.com/2014/07/21/detecting-circles-images-using-opencv-hough-circles/
+    detecting circles - https://www.pyimagesearch.com/2014/07/21/detecting-circles-images-using-opencv-hough-circles/
+                      - https://www.instructables.com/Detecting-Circles-With-OpenCV-and-Python/
+                            - his code - https://content.instructables.com/ORIG/FYS/C6X1/IKECQ3CY/FYSC6X1IKECQ3CY.py
+            - hough circle Off Doc - https://docs.opencv.org/2.4/modules/imgproc/doc/feature_detection.html
 
