@@ -45,4 +45,5 @@
                       - https://www.instructables.com/Detecting-Circles-With-OpenCV-and-Python/
                             - his code - https://content.instructables.com/ORIG/FYS/C6X1/IKECQ3CY/FYSC6X1IKECQ3CY.py
             - hough circle Off Doc - https://docs.opencv.org/2.4/modules/imgproc/doc/feature_detection.html
+            - param 1 and param 2 explained - https://dsp.stackexchange.com/questions/22648/in-opecv-function-hough-circles-how-does-parameter-1-and-2-affect-circle-detecti
 

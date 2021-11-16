@@ -9,6 +9,20 @@ import numpy as np
 # if path not specified /home/pi is the default
 # EXAMPLE: "fswebcam -d /dev/video0 --no-banner -r 320x240 -S 10 /home/pi/foto.jpg
 
+'''
+-------------
+| 0 | 1 | 2 |
+| 3 | 4 | 5 |
+| 6 | 7 | 8 |
+-------------
+
+maybe a model like this would be okay?
+-------------
+| 0 | 1 | 2 |
+-------------
+'''
+# once it finds the ball this will be set with codes 0 - 8 found above
+ballSegment = None
 
 def main():
     dirFoto = "/home/pi/"
@@ -39,10 +53,10 @@ def main():
         output = image.copy()
 
         # display the image width, height, and number of channels
-        (h, w, c) = image.shape[:3]
-        print("width: {} pixels".format(w))
-        print("height: {}  pixels".format(h))
-        print("channels: {}".format(c))
+        # (h, w, c) = image.shape[:3]
+        # print("width: {} pixels".format(w))
+        # print("height: {}  pixels".format(h))
+        # print("channels: {}".format(c))
 
         # converting image to gray color
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -56,8 +70,8 @@ def main():
         # cv2.waitKey(0)
 
         # circles = cv2.HoughCircles(gray, cv2.HOUGH_GRADIENT, 1, 1000, param1=30, param2=65, minRadius=0, maxRadius=0) todo from Shubham Chopra
-        # detect circles in the image
-        circles = cv2.HoughCircles(gray, cv2.HOUGH_GRADIENT, 2.5, 1000, param1=350, param2=100, minRadius=5, maxRadius=0)
+        # detect circles in the image - doesnt detect tiny ball in ball5.jfif (should be smaller than camera feed finds)
+        circles = cv2.HoughCircles(gray, cv2.HOUGH_GRADIENT, 2.5, 1000, param1=350, param2=100, minRadius=0, maxRadius=0)
         # ensure at least some circles were found
         if circles is not None:
             # convert the (x, y) coordinates and radius of the circles to integers
@@ -68,14 +82,14 @@ def main():
                 # corresponding to the center of the circle
                 cv2.circle(output, (x, y), r, (0, 255, 0), 4)
                 cv2.rectangle(output, (x - 5, y - 5), (x + 5, y + 5), (0, 128, 255), -1)
+                # todo: do math to place ball in one of the 3 x 3 segments and set ballSegment to code number
+
             # show the output image
             cv2.imshow("output", np.hstack([image, output]))
             cv2.waitKey(0)
             print("Circle Found")
         else:
             print("found no circles")
-
-
 
 
 if __name__ == "__main__":
